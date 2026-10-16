@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0f172a;
+  --foreground: #f8fafc;
 }
 
 @theme inline {
@@ -12,15 +12,170 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: auto !important;
+  background-color: #0f172a;
+  color: #f8fafc;
 }
 
 body {
-  background: var(--background);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #0f172a;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Lenis smooth scrolling rules */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Hardware accelerated transform layers */
+.gpu-layer {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Selective will-change */
+.will-change-transform {
+  will-change: transform;
+}
+
+.headline-char {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.headline-particle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #fff4d6;
+  box-shadow: 0 0 7px rgba(255, 190, 92, 0.95);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.headline-cloud-veil,
+.headline-glow-sweep {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.headline-cloud-veil {
+  z-index: 2;
+  inset: -0.18em -0.16em;
+  filter: blur(8px);
+  background:
+    radial-gradient(ellipse at 14% 53%, rgba(255, 255, 255, 0.96) 0 12%, transparent 35%),
+    radial-gradient(ellipse at 31% 38%, rgba(255, 255, 255, 0.92) 0 16%, transparent 38%),
+    radial-gradient(ellipse at 51% 57%, rgba(255, 255, 255, 0.94) 0 15%, transparent 37%),
+    radial-gradient(ellipse at 72% 42%, rgba(255, 255, 255, 0.9) 0 17%, transparent 39%),
+    radial-gradient(ellipse at 91% 55%, rgba(255, 255, 255, 0.94) 0 13%, transparent 36%);
+}
+
+.headline-glow-sweep {
+  z-index: 3;
+  inset: -8% -20%;
+  background: linear-gradient(
+    108deg,
+    transparent 42%,
+    rgba(255, 255, 255, 0.14) 47%,
+    rgba(255, 246, 214, 0.85) 50%,
+    rgba(255, 255, 255, 0.2) 53%,
+    transparent 59%
+  );
+  mix-blend-mode: screen;
+}
+
+/* Atmospheric flame flicker */
+@keyframes flameFlicker {
+  0%, 100% {
+    transform: scaleY(1) scaleX(1);
+    opacity: 0.95;
+  }
+  25% {
+    transform: scaleY(1.12) scaleX(0.94);
+    opacity: 1;
+  }
+  50% {
+    transform: scaleY(0.92) scaleX(1.04);
+    opacity: 0.88;
+  }
+  75% {
+    transform: scaleY(1.08) scaleX(0.97);
+    opacity: 0.98;
+  }
+}
+
+.animate-flame-flicker {
+  animation: flameFlicker 0.28s infinite alternate ease-in-out;
+  transform-origin: center bottom;
+}
+
+/* Star twinkle animation */
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+.animate-twinkle-slow {
+  animation: starTwinkle 3s infinite ease-in-out;
+}
+
+.animate-twinkle-fast {
+  animation: starTwinkle 1.8s infinite ease-in-out;
+}
+
+.animate-twinkle-delay {
+  animation: starTwinkle 2.4s infinite ease-in-out 1.2s;
+}
+
+/* Custom scrollbar hiding for cinematic feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
