@@ -521,14 +521,48 @@ export const HotAirBalloon: React.FC<HotAirBalloonProps> = ({ className = '' }) 
             d="M 130 348 C 145 356, 175 356, 190 354 C 205 356, 235 356, 250 348 L 244 362 C 230 366, 190 366, 136 362 Z"
             fill="#1e293b"
             stroke="url(#goldTrim)"
-            strokeWidth="1.5"
+            strokeWidth="1.8"
           />
-          {/* Collar Rivets */}
-          <circle cx="150" cy="358" r="2" fill="#fef08a" />
-          <circle cx="170" cy="360" r="2" fill="#fef08a" />
-          <circle cx="190" cy="360.5" r="2.2" fill="#fef08a" />
-          <circle cx="210" cy="360" r="2" fill="#fef08a" />
-          <circle cx="230" cy="358" r="2" fill="#fef08a" />
+          {/* Vertical Gore Load Webbing Tapes descending onto Skirt */}
+          <g stroke="url(#goldTrim)" strokeWidth="2.2" strokeLinecap="round" opacity="0.9">
+            <line x1="136" y1="348" x2="136" y2="362" />
+            <line x1="150" y1="352" x2="150" y2="363" />
+            <line x1="164" y1="355" x2="164" y2="365" />
+            <line x1="178" y1="356" x2="178" y2="366" />
+            <line x1="190" y1="354" x2="190" y2="366" strokeWidth="2.8" />
+            <line x1="202" y1="356" x2="202" y2="366" />
+            <line x1="216" y1="355" x2="216" y2="365" />
+            <line x1="230" y1="352" x2="230" y2="363" />
+            <line x1="244" y1="348" x2="244" y2="362" />
+          </g>
+          {/* Reinforced Skirt Hem Band */}
+          <path
+            d="M 136 362 C 160 366, 220 366, 244 362"
+            stroke="#b45309"
+            strokeWidth="2.5"
+            fill="none"
+          />
+          {/* Heavy Brass Anchor Eyelet Rings along collar hem */}
+          <g>
+            <circle cx="136" cy="362" r="3.2" fill="#d97706" stroke="#451a03" strokeWidth="1" />
+            <circle cx="136" cy="362" r="1.5" fill="#fef08a" />
+            <circle cx="150" cy="363" r="3.2" fill="#d97706" stroke="#451a03" strokeWidth="1" />
+            <circle cx="150" cy="363" r="1.5" fill="#fef08a" />
+            <circle cx="164" cy="365" r="3.2" fill="#d97706" stroke="#451a03" strokeWidth="1" />
+            <circle cx="164" cy="365" r="1.5" fill="#fef08a" />
+            <circle cx="178" cy="366" r="3.5" fill="#d97706" stroke="#451a03" strokeWidth="1" />
+            <circle cx="178" cy="366" r="1.6" fill="#fef08a" />
+            <circle cx="190" cy="366" r="3.5" fill="#f59e0b" stroke="#451a03" strokeWidth="1.2" />
+            <circle cx="190" cy="366" r="1.6" fill="#ffffff" />
+            <circle cx="202" cy="366" r="3.5" fill="#d97706" stroke="#451a03" strokeWidth="1" />
+            <circle cx="202" cy="366" r="1.6" fill="#fef08a" />
+            <circle cx="216" cy="365" r="3.2" fill="#d97706" stroke="#451a03" strokeWidth="1" />
+            <circle cx="216" cy="365" r="1.5" fill="#fef08a" />
+            <circle cx="230" cy="363" r="3.2" fill="#d97706" stroke="#451a03" strokeWidth="1" />
+            <circle cx="230" cy="363" r="1.5" fill="#fef08a" />
+            <circle cx="244" cy="362" r="3.2" fill="#d97706" stroke="#451a03" strokeWidth="1" />
+            <circle cx="244" cy="362" r="1.5" fill="#fef08a" />
+          </g>
         </g>
 
         {/* ============================================================== */}
@@ -608,23 +642,102 @@ export const HotAirBalloon: React.FC<HotAirBalloonProps> = ({ className = '' }) 
         </g>
 
         {/* ============================================================== */}
-        {/* RIGGING SUSPENSION ROPES */}
+        {/* RIGID BURNER SUPPORT UPRIGHT STRUTS & SUSPENSION RIGGING */}
         {/* ============================================================== */}
-        <g id="balloon-gondola-sway">
-        <g id="balloon-rigging" stroke="#78350f" strokeWidth="1.3" opacity="0.85">
-          {/* Envelope to Burner & Basket Ropes */}
-          <line x1="138" y1="362" x2="166" y2="420" />
-          <line x1="148" y1="364" x2="170" y2="420" />
-          <line x1="162" y1="366" x2="178" y2="420" />
-          <line x1="184" y1="367" x2="184" y2="384" />
-          <line x1="196" y1="367" x2="196" y2="384" />
-          <line x1="218" y1="366" x2="202" y2="420" />
-          <line x1="232" y1="364" x2="210" y2="420" />
-          <line x1="242" y1="362" x2="214" y2="420" />
+        <g id="balloon-rigging-and-struts">
+          {/* Rigid Burner Support Uprights (Heavy Padded Posts connecting Basket to Burner) */}
+          <g id="burner-upright-struts">
+            {/* Left Outer Upright Strut: Basket rim (167, 420) to Burner frame (177, 384) */}
+            <line x1="167" y1="420" x2="177" y2="384" stroke="#1c1917" strokeWidth="5.5" strokeLinecap="round" />
+            <line x1="167" y1="420" x2="177" y2="384" stroke="#78350f" strokeWidth="4.0" strokeLinecap="round" />
+            <line x1="167" y1="420" x2="177" y2="384" stroke="url(#goldTrim)" strokeWidth="2.2" strokeLinecap="round" />
+            <line x1="167" y1="420" x2="177" y2="384" stroke="#fef08a" strokeWidth="0.8" opacity="0.75" />
 
-          {/* Cross Support Straps for Basket */}
-          <line x1="166" y1="420" x2="178" y2="384" stroke="#92400e" strokeWidth="0.8" opacity="0.6" />
-          <line x1="214" y1="420" x2="202" y2="384" stroke="#92400e" strokeWidth="0.8" opacity="0.6" />
+            {/* Right Outer Upright Strut: Basket rim (213, 420) to Burner frame (203, 384) */}
+            <line x1="213" y1="420" x2="203" y2="384" stroke="#1c1917" strokeWidth="5.5" strokeLinecap="round" />
+            <line x1="213" y1="420" x2="203" y2="384" stroke="#78350f" strokeWidth="4.0" strokeLinecap="round" />
+            <line x1="213" y1="420" x2="203" y2="384" stroke="url(#goldTrim)" strokeWidth="2.2" strokeLinecap="round" />
+            <line x1="213" y1="420" x2="203" y2="384" stroke="#fef08a" strokeWidth="0.8" opacity="0.75" />
+
+            {/* Inner Left Strut: Basket rim (174, 420) to Burner frame (181, 384) */}
+            <line x1="174" y1="420" x2="181" y2="384" stroke="#1c1917" strokeWidth="4.2" strokeLinecap="round" />
+            <line x1="174" y1="420" x2="181" y2="384" stroke="#92400e" strokeWidth="2.8" strokeLinecap="round" />
+            <line x1="174" y1="420" x2="181" y2="384" stroke="#d97706" strokeWidth="1.4" />
+
+            {/* Inner Right Strut: Basket rim (206, 420) to Burner frame (199, 384) */}
+            <line x1="206" y1="420" x2="199" y2="384" stroke="#1c1917" strokeWidth="4.2" strokeLinecap="round" />
+            <line x1="206" y1="420" x2="199" y2="384" stroke="#92400e" strokeWidth="2.8" strokeLinecap="round" />
+            <line x1="206" y1="420" x2="199" y2="384" stroke="#d97706" strokeWidth="1.4" />
+
+            {/* Heavy Cast Stainless Steel Mounting Sockets on Burner Base */}
+            <rect x="174" y="382" width="7" height="4.5" rx="1" fill="#cbd5e1" stroke="#334155" strokeWidth="0.8" />
+            <rect x="199" y="382" width="7" height="4.5" rx="1" fill="#cbd5e1" stroke="#334155" strokeWidth="0.8" />
+
+            {/* Heavy Cast Mounting Socket Brackets on Basket Rim */}
+            <rect x="164" y="416" width="7" height="6.5" rx="1.5" fill="#cbd5e1" stroke="#334155" strokeWidth="0.9" />
+            <rect x="209" y="416" width="7" height="6.5" rx="1.5" fill="#cbd5e1" stroke="#334155" strokeWidth="0.9" />
+          </g>
+
+          {/* Diagonal Cross-Tension Bracing Cables with Central Turnbuckle */}
+          <g opacity="0.85">
+            <line x1="167" y1="420" x2="203" y2="384" stroke="#0f172a" strokeWidth="1.8" />
+            <line x1="167" y1="420" x2="203" y2="384" stroke="#f59e0b" strokeWidth="1.0" />
+            <line x1="213" y1="420" x2="177" y2="384" stroke="#0f172a" strokeWidth="1.8" />
+            <line x1="213" y1="420" x2="177" y2="384" stroke="#f59e0b" strokeWidth="1.0" />
+            <circle cx="190" cy="402" r="3" fill="#cbd5e1" stroke="#334155" strokeWidth="0.9" />
+            <circle cx="190" cy="402" r="1.2" fill="#475569" />
+          </g>
+
+          {/* High-Tensile Suspension Rigging Cables (Envelope Skirt directly to Basket & Burner) */}
+          <g id="envelope-suspension-cables">
+            {/* Cable 1: Far Left Skirt Grommet (136, 362) to Basket Corner (167, 420) */}
+            <line x1="136" y1="362" x2="167" y2="420" stroke="#0f172a" strokeWidth="2.5" />
+            <line x1="136" y1="362" x2="167" y2="420" stroke="url(#goldTrim)" strokeWidth="1.6" />
+            <line x1="136" y1="362" x2="167" y2="420" stroke="#ffffff" strokeWidth="0.6" opacity="0.6" />
+
+            {/* Cable 2: Left-Mid Skirt Grommet (150, 363) to Basket Rim (169, 420) */}
+            <line x1="150" y1="363" x2="169" y2="420" stroke="#0f172a" strokeWidth="2.2" />
+            <line x1="150" y1="363" x2="169" y2="420" stroke="#f59e0b" strokeWidth="1.4" />
+
+            {/* Cable 3: Left-Inner Skirt Grommet (164, 365) to Basket (174, 420) */}
+            <line x1="164" y1="365" x2="174" y2="420" stroke="#0f172a" strokeWidth="2.2" />
+            <line x1="164" y1="365" x2="174" y2="420" stroke="#fbbf24" strokeWidth="1.4" />
+
+            {/* Cable 4: Right-Inner Skirt Grommet (216, 365) to Basket (206, 420) */}
+            <line x1="216" y1="365" x2="206" y2="420" stroke="#0f172a" strokeWidth="2.2" />
+            <line x1="216" y1="365" x2="206" y2="420" stroke="#fbbf24" strokeWidth="1.4" />
+
+            {/* Cable 5: Right-Mid Skirt Grommet (230, 363) to Basket Rim (211, 420) */}
+            <line x1="230" y1="363" x2="211" y2="420" stroke="#0f172a" strokeWidth="2.2" />
+            <line x1="230" y1="363" x2="211" y2="420" stroke="#f59e0b" strokeWidth="1.4" />
+
+            {/* Cable 6: Far Right Skirt Grommet (244, 362) to Basket Corner (213, 420) */}
+            <line x1="244" y1="362" x2="213" y2="420" stroke="#0f172a" strokeWidth="2.5" />
+            <line x1="244" y1="362" x2="213" y2="420" stroke="url(#goldTrim)" strokeWidth="1.6" />
+            <line x1="244" y1="362" x2="213" y2="420" stroke="#ffffff" strokeWidth="0.6" opacity="0.6" />
+
+            {/* Burner Gimbal Heavy Stays: Envelope Throat (178, 202) to Burner Frame */}
+            <line x1="178" y1="366" x2="178" y2="384" stroke="#0f172a" strokeWidth="2.8" />
+            <line x1="178" y1="366" x2="178" y2="384" stroke="url(#goldTrim)" strokeWidth="1.8" />
+            <line x1="190" y1="366" x2="190" y2="374" stroke="#0f172a" strokeWidth="2.4" />
+            <line x1="190" y1="366" x2="190" y2="374" stroke="#fef08a" strokeWidth="1.4" />
+            <line x1="202" y1="366" x2="202" y2="384" stroke="#0f172a" strokeWidth="2.8" />
+            <line x1="202" y1="366" x2="202" y2="384" stroke="url(#goldTrim)" strokeWidth="1.8" />
+
+            {/* Diagonal Stabilizer Stay Cables to Burner Gimbal */}
+            <line x1="164" y1="365" x2="177" y2="384" stroke="#d97706" strokeWidth="1.4" />
+            <line x1="216" y1="365" x2="203" y2="384" stroke="#d97706" strokeWidth="1.4" />
+          </g>
+
+          {/* Heavy Steel Carabiner Rings on Basket Rim */}
+          <g>
+            <circle cx="167" cy="420" r="3.8" fill="#334155" stroke="url(#goldTrim)" strokeWidth="1.2" />
+            <circle cx="167" cy="420" r="1.8" fill="#fef08a" />
+            <circle cx="174" cy="420" r="3.2" fill="#334155" stroke="url(#goldTrim)" strokeWidth="1.0" />
+            <circle cx="206" cy="420" r="3.2" fill="#334155" stroke="url(#goldTrim)" strokeWidth="1.0" />
+            <circle cx="213" cy="420" r="3.8" fill="#334155" stroke="url(#goldTrim)" strokeWidth="1.2" />
+            <circle cx="213" cy="420" r="1.8" fill="#fef08a" />
+          </g>
         </g>
 
         {/* ============================================================== */}
@@ -722,7 +835,6 @@ export const HotAirBalloon: React.FC<HotAirBalloonProps> = ({ className = '' }) 
               className="opacity-0 transition-opacity duration-700"
             />
           </g>
-        </g>
         </g>
       </svg>
     </div>

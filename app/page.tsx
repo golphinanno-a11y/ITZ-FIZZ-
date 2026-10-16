@@ -177,14 +177,6 @@ export default function Home() {
               yoyo: true,
               ease: 'sine.inOut',
             });
-            gsap.to('#balloon-gondola-sway', {
-              rotation: 2.2,
-              transformOrigin: '190px 375px',
-              duration: 2.6,
-              repeat: -1,
-              yoyo: true,
-              ease: 'sine.inOut',
-            });
             gsap.to('#cirrus-cloud-drift', {
               xPercent: -8,
               duration: 18,
@@ -293,10 +285,6 @@ export default function Home() {
         const setAeroLift = balloonAeroRef.current
           ? gsap.quickTo(balloonAeroRef.current, 'y', { duration: 0.65, ease: 'power2.out' })
           : () => {};
-        const setGondolaWindLag = gsap.quickTo('#balloon-gondola-sway', 'rotation', {
-          duration: 0.9,
-          ease: 'power1.out',
-        });
         const setStreamerWindTilt = gsap.quickTo('#balloon-basket-streamers', 'rotation', {
           duration: 0.65,
           ease: 'power2.out',
@@ -324,7 +312,6 @@ export default function Home() {
 
                 setAeroPitch(pitch);
                 setAeroLift(dragY);
-                setGondolaWindLag(-pitch * 0.85); // gondola trails behind
                 setStreamerWindTilt(-pitch * 1.6); // streamers trail in wind
               }
 
